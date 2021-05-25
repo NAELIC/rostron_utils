@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'rostron-utils'
+package_name = 'rostron_utils'
 
 setup(
     name=package_name,
