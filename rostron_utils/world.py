@@ -19,14 +19,7 @@ class World():
         self.node_ = node
         node.create_subscription(Field, 'field', self.field_callback, 10)
 
-    def ready(self) -> None:
-        while not(all(self.receive_once)):
-            self.node_.get_logger().info('Waiting to receive all topics once...')
-        self.node_.get_logger().info('Waiting finished')
-
     def field_callback(self, msg: Field) -> None:
-        self.node_.get_logger().info('receive')
-
         if self.field != msg:
             self.receive_once[0] = True
             self.field = msg
