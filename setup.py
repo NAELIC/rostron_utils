@@ -13,10 +13,10 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='gurvan',
-    maintainer_email='gurvan.le-direach@etu.u-bordeaux.fr',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    maintainer='Etienne SCHMITZ',
+    maintainer_email='contact@etienne-schmitz.com',
+    description='Utility class to work with python',
+    license='MIT',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
