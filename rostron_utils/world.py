@@ -43,3 +43,20 @@ class World():
 
     def ball_callback(self, msg: Ball) -> None:
         self.ball = msg
+    
+    def get_robot_position(self, id):
+        """Return the position (x,y) of robot with the according id"""
+        return (self.allies[id].pose.position.x,
+                self.allies[id].pose.position.y)
+
+    def get_robot_orientation(self,id):
+        """Return the orientation in radian of the specific robot"""
+        return self.allies[id].pose.orientation.z 
+
+    def get_ball_position(self):
+        """Return the ball position in a tuple (x,y)"""
+        return (self.ball.position.x,self.ball.position.y)
+    
+    def print(self, sentence):
+        """Alternative to print in the logger of ROS"""
+        self.node_.get_logger().info(sentence)
